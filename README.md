@@ -4,6 +4,8 @@ Credential Agent Docker Compose
 This agent can be deployed on a single instance as a docker compose that will run the agent and an instance of mongo.
 It is **not recommended** to use docker-compose in a production environment.
 
+This has been tested on Version 19 of docker and 1.26 of docker-compose. Your mileage may vary on other versions.
+
 ## Getting Started
 
 Use the credentialagent-docker-compose repo 
