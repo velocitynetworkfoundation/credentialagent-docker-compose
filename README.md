@@ -6,6 +6,12 @@ It is **not recommended** to use docker-compose in a production environment.
 
 This has been tested on Version 19 of docker and 1.26 of docker-compose. Your mileage may vary on other versions.
 
+## Docker
+1. Go to https://github.com/settings/tokens/new
+1. Specify what the token can do (add at least read:packages)
+1. Save the token into your working dir in a file named vnf-github-package.token.
+1. cat ./vnf-github-package.token | docker login https://docker.pkg.github.com -u USERNAME --password-stdin where USERNAME is the github username.
+
 ## Getting Started
 
 Use the credentialagent-docker-compose repo 
@@ -22,7 +28,7 @@ Use the credentialagent-docker-compose repo
 
 The agent runs on HTTPS or HTTP. If you would like to use TLS (recommended) to connect to the agent either:
 
-- use the SERVER*CERTIFICATE*\* to have the agent run TLS termination directly
+- use the SERVER_CERTIFICATE_\* to have the agent run TLS termination directly
 - run a reverse proxy for TLS termination (nginx is much more efficient than your typical application server)
 
 | _Env Var_                   | _Sample Value_                                                             | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_description_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
