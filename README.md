@@ -6,7 +6,7 @@ It is **not recommended** to use docker-compose in a production environment.
 
 This has been tested on Version 19 of docker and 1.26 of docker-compose. Your mileage may vary on other versions.
 
-## Docker
+## Docker Prerequisites
 1. Go to https://github.com/settings/tokens/new
 1. Specify what the token can do (add at least read:packages)
 1. Save the token into your working dir in a file named vnf-github-package.token.
