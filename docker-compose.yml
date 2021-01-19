@@ -7,6 +7,15 @@ services:
     ports:
       - 27018:27017
 
+  credentialagent-migrations:
+    image: docker.pkg.github.com/velocitynetworkfoundation/packages/credentialagent:latest
+    env_file:
+      - .env
+    command: yarn migrate:up
+    restart: "no"
+    depends_on:
+      - velocity-mongo
+
   credentialagent:
     image: docker.pkg.github.com/velocitynetworkfoundation/packages/credentialagent:latest
     env_file:
@@ -15,5 +24,5 @@ services:
       - 8080:3000
     restart: on-failure
     depends_on:
-      - velocity-mongo
+      - credentialagent-migrations
 
