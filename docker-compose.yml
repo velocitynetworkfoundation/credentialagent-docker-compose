@@ -11,8 +11,8 @@ services:
     image: docker.pkg.github.com/velocitynetworkfoundation/packages/credentialagent:latest
     env_file:
       - .env
-    command: sh -c "cd servers/credentialagent && yarn migrate:up"
-    restart: on-failure
+    command: yarn migrate:up
+    restart: "no"
     depends_on:
       - velocity-mongo
 
