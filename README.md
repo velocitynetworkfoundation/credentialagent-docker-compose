@@ -10,7 +10,7 @@ This has been tested on Version 19 of docker and 1.26 of docker-compose. Your mi
 1. Go to https://github.com/settings/tokens/new
 1. Specify what the token can do (add at least read:packages)
 1. Save the token into your working dir in a file named vnf-github-package.token.
-1. cat ./vnf-github-package.token | docker login https://ghcr.io -u USERNAME --password-stdin where USERNAME is the github username.
+1. cat ./vnf-github-package.token | docker login https://docker.pkg.github.com -u USERNAME --password-stdin where USERNAME is the github username.
 
 ## Getting Started
 
