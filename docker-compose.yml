@@ -8,7 +8,7 @@ services:
       - 27018:27017
 
   credentialagent-migrations:
-    image: docker.pkg.github.com/velocitynetworkfoundation/packages/credentialagent:latest
+    image: ghcr.io/velocitynetworkfoundation/packages/credentialagent:latest
     env_file:
       - .env
     command: yarn migrate:up
@@ -17,7 +17,7 @@ services:
       - velocity-mongo
 
   credentialagent:
-    image: docker.pkg.github.com/velocitynetworkfoundation/packages/credentialagent:latest
+    image: ghcr.io/velocitynetworkfoundation/packages/credentialagent:latest
     env_file:
       - .env
     ports:
