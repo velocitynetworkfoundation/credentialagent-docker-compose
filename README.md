@@ -12,7 +12,7 @@ Use the credentialagent-docker-compose repo
 1. `git clone https://github.com/velocitynetworkfoundation/credentialagent-docker-compose.git`
 1. `cd credentialagent-docker-compose`
 1. `cp .env_example .env`
-1. Update the .env file if necessary (e.g. generating new `SECRET` or pointing at a different `VENDOR_URL`)
+1. Fill in empty values (and optionally modify existing ones) in the .env. (See [Credential Agent Configuration](https://www.velocitynetwork.foundation/main/operators-guide-credential-agents#agent-server-configuration))
 1. `docker-compose pull`
 1. `docker-compose up`
 1. `curl http://localhost:8080` should return a successful response

@@ -3,7 +3,7 @@ services:
   velocity-mongo:
     image: mongo:4.0.4
     volumes:
-      - ./mongo:/data
+      - ./mongo:/data/db
     ports:
       - 27018:27017
 
